@@ -56,6 +56,30 @@ A valid network key will be a 16 byte value, defined in the zwave section of you
 
 Each individual value in the defined key can be anywhere from 0x00 to 0xFF. Define your own key by making changes to the above example key.
 
+## Adding and Removing Z-Wave Devices
+Once the driver is installed and configured, the next step is add your Z-Wave devices to your hub. If you have already paired Z-Wave devices with your hub, the driver should automatically pick them up. 
+
+### Add Device
+To add a Z-Wave device:
+1. Open your Ignition Designer
+2. Select the ZWave tag provider in the Tag Browser dropdown list. The provider is found under All Providers on older versions of Ignition.
+3. Expand the Homes folder to find your home identifier. If you do not see a home, please restart the Z-Wave module.
+4. If you have a secure device, set the AddSecureNode tag to true to put your hub in inclusion mode. If you have a non-secure device, set the AddNode tag to true. 
+5. Follow your devices instructions to activate inclusion. Typically this involves pressing a button.
+6. The module should automatically pick up the device and tags will get added to your home nodes folder, identified by the device number starting 01. **This process may take some time. You can watch the progress by looking at the QueueSize tag. Once it reaches 0 it is complete.**
+7. If the process fails, try removing the device and trying again.
+8. Follow the same procedure to add more devices.
+
+### Remove Device
+To remove a Z-Wave device:
+1. Open your Ignition Designer
+2. Select the ZWave tag provider in the Tag Browser dropdown list. The provider is found under All Providers on older versions of Ignition.
+3. Expand the Homes folder to find your home identifier. If you do not see a home, please restart the Z-Wave module.
+4. Set the RemoveNode tag to true to put your hub in exlusion mode.
+5. Follow your devices instructions to activate exclusion. Typically this involves pressing a button.
+6. The module should automatically remove the device from your home nodes folder.
+7. Follow the same procedure to remove more devices.
+
 ## Status
 This driver is still under active development. Here are the messages currently supported:
 
