@@ -28,7 +28,7 @@ Windows
 `C:\Program Files\Inductive Automation\Ignition\data\ignition.conf`
 
 Linux  
-`\var\lib\ignition\data\ignition.conf`
+`/usr/local/bin/ignition/data/ignition.conf`
 
 Add an additonal Java parameter in the 'Java Additional Parameters' section below the first parameter:
 
