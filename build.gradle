@@ -54,9 +54,7 @@ ignitionModule {
     moduleDependencies = []
     // map our projects to the scopes their jars should apply
     projectScopes = [
-        [name: "gateway", scope: "G"],
-        [name: "designer", scope: "D"],
-        [name: "common", scope: "GDC"]
+        [name: "gateway", scope: "G"]
     ]
 
     hooks = [

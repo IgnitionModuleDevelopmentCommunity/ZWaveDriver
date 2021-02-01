@@ -9,9 +9,7 @@ java {
 }
 
 dependencies {
-    //we have a compile dependency on the common project
-    compileOnly(project(":common"))
-
-    compileOnly("com.inductiveautomation.ignitionsdk:gateway-api:8.0.3")
-    toModl("com.fazecast:jSerialComm:[2.0.0,3.0.0)")
+    compileOnly("com.inductiveautomation.ignitionsdk:gateway-api:8.1.1")
+    toModl("commons-beanutils:commons-beanutils:1.9.4")
+    toModl("com.fazecast:jSerialComm:2.6.2")
 }

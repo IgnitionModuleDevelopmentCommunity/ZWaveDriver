@@ -37,5 +37,5 @@ pluginManagement {
 rootProject.name = "zwave-driver"
 
 // link up our subprojects as part of this multi-project build.  Add/remove subprojects gradle path notation.
-include(":common", ":gateway", ":designer")
+include(":gateway")
 
